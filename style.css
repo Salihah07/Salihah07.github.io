@@ -1,8 +1,8 @@
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  color: #1f2937;
-  background: #f0fdf4;
+  color: #f0fdf4;
+  background: pink;
   font-family: Arial, sans-serif;
   line-height: 1.6;
 }
