@@ -7,17 +7,39 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+ <!--Wrapper-->
+  <div id="wrapper" class="fade-in">
+    
     <!--Welcome card-->
-    <div class= "title-float">
-    <h1>Welcome to Nur Salihah's E-Portfolio</h1>
-      <div>class="btn-container">
-        <a href="https://github.com/Salihah07" target="_blank" class="github-btn">
+    <div id="intro">
+    <h1>Welcome to </br>
+      Nur Salihah's </br>
+      E-Portfolio.</h1>
+   <ul class="actions">
+     <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+   </ul>
+    </div>
+    <!--header-->
+    <header id="header" class="hidden">
+        <a href="https://github.com/Salihah07" targets="_blank" class="logo">
           My Github Profile
         </a>
-      </div>
-    </div>
-    <p>SCST1133 Data Engineering Ecosystem</p>
+        </header>
+  </div>
+  <!--JavaScript to pop out the Github button-->
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      if (window.scrollY> 200) {
+        header.classList.add('visible');
+      } else {
+        header.classList.remove('visible');
+      }
+    });
+  </script>
+     
+    
+    <!--nav-->
     <nav>
       <a href="#about">About</a>
       <a href="#work">Selected Work</a>
