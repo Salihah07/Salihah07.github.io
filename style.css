@@ -11,6 +11,9 @@ header, main, footer {
   margin: auto;
 }
 header { padding: 48px 0 24px; }
+header h1 {
+    text-align: center;
+}
 nav { display: flex; flex-wrap: wrap; gap: 16px; }
 section {
   margin: 20px 0;
