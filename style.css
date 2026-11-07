@@ -5,65 +5,27 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #1e1e24; /* Dark slate background */
+  font-family: 'Roboto', sans-serif; 
+  background-color: #1e1e24;
   color: #ffffff;
   line-height: 1.6;
+  font-size: 1.15rem;
 }
 
-/* intro */
-#intro {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  .large-text {
-  font-size: 24px; 
-  font-weight: bold; 
- }
-}
-
-/* popout effect*/
-.welcome-card {
-  animation: popOut 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.27) forwards;
-}
-
-@keyframes popOut {
-  0% {
-    opacity: 0;
-    transform: scale(0.5) translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
-#intro h1 {
-  font-size: 2.5rem;
-  color: #ffffff !important;
-  letter-spacing: 2px;
-  line-height: 1.4;
-  text-transform: uppercase;
-}
-
-/*github logo */
+/* header */
 #header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  width: 100%;
+  z-index: 999;
   background-color: #1e1e24;
-  padding: 16px 0;
+  padding: 18px 0;
   text-align: center;
-  
-  /*popout when scroll down */
   opacity: 0;
-  transform: translateY(-20px);
+  transform: translateY(-10px);
   pointer-events: none;
-  transition: all 0.4s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 #header.visible {
@@ -74,11 +36,11 @@ body {
 
 #header .logo {
   display: inline-block;
-  border: 3px solid #ffffff;
+  border: 2px solid #ffffff;
   color: #ffffff;
   padding: 10px 28px;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.1rem;
+  font-weight: 700;
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
@@ -90,27 +52,44 @@ body {
   color: #1e1e24;
 }
 
+/* intro */
+#intro {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+#intro h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #ffffff !important;
+  letter-spacing: 3px;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
 /* nav */
 nav {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 16px 0;
+  gap: 28px;
+  padding: 20px 0;
   background-color: #272730;
 }
 
 nav a {
   color: #ffffff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1.2rem;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-nav a:hover {
-  color: #8a1538;
-}
-
-/*  Main Content Sections */
+/* Main Sections & Headings */
 main, footer {
   width: min(900px, 92%);
   margin: 40px auto;
@@ -119,26 +98,39 @@ main, footer {
 section {
   background-color: #ffffff;
   color: #0f172a;
-  padding: 32px 24px;
+  padding: 40px 32px;
   margin-bottom: 30px;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 section h2 {
-  margin-bottom: 16px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
   color: #1e1e24;
+}
+
+section h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+section p {
+  font-size: 1.2rem;
+  line-height: 1.7;
 }
 
 img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  margin: 16px 0;
+  margin: 20px 0;
 }
 
 footer {
   text-align: center;
-  padding: 20px 0;
+  padding: 24px 0;
   color: #a1a1aa;
+  font-size: 1.1rem;
 }
