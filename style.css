@@ -3,7 +3,7 @@ body {
   margin: 0;
   color: #0f172a;
   background: #f4f7f6 ;
-  font-family: Arial, sans-serif; 
+  font-family: Roboto, sans-serif; 
   line-height: 1.6; 
 }
 header, main, footer {
@@ -13,6 +13,17 @@ header, main, footer {
 header { padding: 48px 0 24px; }
 header h1 {
     text-align: center;
+}
+/* Floating welcome card*/
+.title-float{
+  background : white;
+  padding: 28px 24px;
+  border-radius: 16px
+  box-shadow:0 10px 25px rgba(0, 0, 0, 0.08); /* Gives the floating effect */
+    display: inline-block;
+    width: 100%;
+    max-width: 650px;
+    margin-bottom: 24px;
 }
 nav { display: flex; flex-wrap: wrap; gap: 16px; }
 section {
