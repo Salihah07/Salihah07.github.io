@@ -3,7 +3,7 @@ body {
   margin: 0;
   color: #0f172a;
   background: #f4f7f6 ;
-  font-family: Arial, sans-serif; 
+  font-family: Roboto, sans-serif; 
   line-height: 1.6; 
 }
 header, main, footer {
@@ -15,7 +15,7 @@ nav { display: flex; flex-wrap: wrap; gap: 16px; }
 section {
   margin: 20px 0;
   padding: 24px;
-  background: white;
+  background: #F2B1B1;
   border-radius: 12px;
 }
 img { max-width: 100%; height: auto; }
