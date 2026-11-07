@@ -20,6 +20,10 @@ body {
   align-items: center;
   text-align: center;
   padding: 20px;
+  .large-text {
+  font-size: 24px; 
+  font-weight: bold; 
+ }
 }
 
 /* popout effect*/
