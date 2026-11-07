@@ -1,37 +1,128 @@
-* { box-sizing: border-box; }
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  color: #0f172a;
-  background: #1e1e24;
-  font-family: Roboto, sans-serif; 
-  line-height: 1.6; 
+  padding: 0;
 }
-header, main, footer {
-  width: min(960px, 92%);
-  margin: auto;
-}
-header { padding: 48px 0 24px; }
 
-header h1 {
-    text-align: center;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e24; /* Dark background */
+  color: #ffffff;
+  line-height: 1.6;
 }
-/* Floating welcome card*/
-.title-float{
-  background : white;
-  padding: 28px 24px;
-  border-radius: 16px
-  box-shadow:0 10px 25px rgba(0, 0, 0, 0.08); /* Gives the floating effect */
-    display: inline-block;
-    width: 100%;
-    max-width: 650px;
-    margin-bottom: 24px;
+
+/* 2. Hero Intro (Paling Atas) */
+#intro {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
-nav { display: flex; flex-wrap: wrap; gap: 16px; }
+
+#intro h1 {
+  font-size: 2.5rem;
+  color: #ffffff !important; /* Paksa warna putih */
+  letter-spacing: 2px;
+  line-height: 1.4;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+/* Butang Panah */
+.actions {
+  list-style: none;
+}
+
+.actions a.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* 3. Header GitHub Logo (Pop out bila scroll) */
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #1e1e24;
+  padding: 16px 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+#header.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#header .logo {
+  display: inline-block;
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  padding: 10px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#header .logo:hover {
+  background-color: #ffffff;
+  color: #1e1e24;
+}
+
+/* 4. Menu Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 16px 0;
+  background-color: #272730;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* 5. Kad Kandungan (About, Work, Reflection) */
+main, footer {
+  width: min(900px, 92%);
+  margin: 40px auto;
+}
+
 section {
-  margin: 20px 0;
-  padding: 24px;
-  background: #F2B1B1;
+  background-color: #ffffff;
+  color: #0f172a;
+  padding: 32px 24px;
+  margin-bottom: 30px;
   border-radius: 12px;
 }
-img { max-width: 100%; height: auto; }
-a { color: #8a1538; }
+
+section h2 {
+  margin-bottom: 16px;
+  color: #1e1e24;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #a1a1aa;
+}
