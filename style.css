@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Roboto', sans-serif; 
-  background-color: #1e1e24;
+  background-color: rgb(94, 121, 176);
   color: #ffffff;
   line-height: 1.6;
   font-size: 1.15rem;
@@ -20,13 +20,13 @@ body {
   transform: translateX(-50%) translateY(-10px);
   
   z-index: 999;
-  background-color: #8fb8dc;
+  background-color: rgb(94, 121, 176);
   padding: 18px 0;
   text-align: center;
   opacity: 0;
  
   pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 #header.visible {
@@ -45,6 +45,7 @@ body {
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -55,12 +56,21 @@ body {
 
 /* intro */
 #intro {
-  min-height: 100vh;
+  min-height: 65vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 60px 20px 20px 20px;
+  opacity:1;
+  transition: opacity 0.4s ease transform 0.4s ease;
+}
+
+/* Fade out effect for intro */
+#intro.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
 }
 
 #intro h1 {
