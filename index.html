@@ -68,10 +68,14 @@
   <script>
     window.addEventListener('scroll', function() {
       const header = document.getElementById('header');
-      if (window.scrollY > 200) {
+      const intro = document.getElementById('intro');
+
+      if (window.scrollY > 150) {
         header.classList.add('visible');
+        intro.classList.add('fade-out');
       } else {
         header.classList.remove('visible');
+        intro.classList.remove('fade-out');
       }
     });
   </script>
