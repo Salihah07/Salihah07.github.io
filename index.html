@@ -12,14 +12,6 @@
 </head>
 <body>
 
-    
-   <!--Header github-->
-  <header id="header">
-    <a href="https://github.com/Salihah07" target="_blank" class="logo">
-      MY GITHUB PROFILE
-    </a>
-  </header>
-
   <!-- intro-->
   <div id="intro">
     <div class="welcome-card">
@@ -29,6 +21,13 @@
     </div>
   </div>
      
+  <!--Header github-->
+  <header id="header">
+    <a href="https://github.com/Salihah07" target="_blank" class="logo">
+      MY GITHUB PROFILE
+    </a>
+  </header>
+
     <!--nav-->
     <nav>
       <a href="#about">About</a>
@@ -63,17 +62,18 @@
   <footer><p>© 2026 Nur Salihah</p></footer>
   </div>
   
-  <!-- Fade the intro as the page scrolls -->
+  <!-- Reveal the GitHub link as it reaches the top of the page. -->
   <script>
-    window.addEventListener('scroll', function() {
+    function updateScrollEffects() {
       const intro = document.getElementById('intro');
+      const scrolledPastIntro = intro.getBoundingClientRect().bottom <= 0;
 
-      if (window.scrollY > intro.offsetHeight) {
-        intro.classList.add('fade-out');
-      } else {
-        intro.classList.remove('fade-out');
-      }
-    });
+      intro.classList.toggle('fade-out', scrolledPastIntro);
+      document.getElementById('header').classList.toggle('visible', scrolledPastIntro);
+    }
+
+    window.addEventListener('scroll', updateScrollEffects, { passive: true });
+    updateScrollEffects();
   </script>
 
 
