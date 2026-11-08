@@ -63,17 +63,14 @@
   <footer><p>© 2026 Nur Salihah</p></footer>
   </div>
   
-  <!-- JavaScript for Sticky Header on Scroll -->
+  <!-- Fade the intro as the page scrolls -->
   <script>
     window.addEventListener('scroll', function() {
-      const header = document.getElementById('header');
       const intro = document.getElementById('intro');
 
-      if (window.scrollY > 50) {
-        header.classList.add('visible');
+      if (window.scrollY > intro.offsetHeight) {
         intro.classList.add('fade-out');
       } else {
-        header.classList.remove('visible');
         intro.classList.remove('fade-out');
       }
     });
