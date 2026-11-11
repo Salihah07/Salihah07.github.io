@@ -3,84 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My E-Portfolio</title>
+  <title>Nur Salihah | SCST1133 E-Portfolio</title>
+
   <!-- Google Font: Roboto -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Link to our CSS file -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- intro-->
-  <div id="intro">
-    <div class="welcome-card">
-      <h1>WELCOME TO <br />
-      NUR SALIHAH'S <br />
-      E-PORTFOLIO.</h1>
-    </div>
-  </div>
-     
-  <!--Header github-->
-  <header id="header">
-    <a href="https://github.com/Salihah07" target="_blank" class="logo">
-      MY GITHUB PROFILE
-    </a>
+  <!-- ===== NAVIGATION BAR ===== -->
+  <!-- Each link jumps to the section with the matching id -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#journey">Learning Journey</a>
+    <a href="#work">Selected Work</a>
+    <a href="#summary">Course Summary</a>
+    <a href="#sources">Sources</a>
+  </nav>
+
+  <!-- ===== HOME / PROFESSIONAL PROFILE ===== -->
+  <header id="home">
+    <h1>Nur Salihah</h1>
+    <p class="subtitle">SCST1133 Data Engineering E-Portfolio</p>
+    <a class="button" href="https://github.com/Salihah07" target="_blank">My GitHub Profile</a>
   </header>
 
-    <!--nav-->
-    <nav>
-      <a href="#about">About</a>
-      <a href="#journey">Learning Journey</a>
-      <a href="#work">Selected Work</a>
-      <a href="#reflection">Reflection</a>
-    </nav>
-
-
   <main>
-    <section id="about">
+
+    <section>
       <h2>About me</h2>
-      <p>Hi! im <strong> Nur Salihah </strong>, a Computer Science student specializing in <strong>Data Engineering</strong> at Universiti Teknologi Malaysia (UTM), I am passionate about database management, data processing, and building reliable software solutions.
- </p>
+      <p>
+        Hi! I'm <strong>Nur Salihah</strong>, a Computer Science student specialising in
+        <strong>Data Engineering</strong> at Universiti Teknologi Malaysia (UTM).
+        I am passionate about database management, data processing, and building reliable software solutions.
+      </p>
     </section>
 
+    <!-- ===== LEARNING JOURNEY ===== -->
+    <!-- The six themes from the assignment. Write 2-3 sentences for each one. -->
+    <section id="journey">
+      <h2>Learning Journey</h2>
+
+      <h3>1. Foundations</h3>
+      <p class="topic">Computing concepts and digital tools</p>
+      <p>Write what you learned about computing concepts and tools such as GitHub.</p>
+
+      <h3>2. Landscape</h3>
+      <p class="topic">Data engineering and the data landscape</p>
+      <p>Write what data engineering is, in your own words.</p>
+
+      <h3>3. Ecosystem</h3>
+      <p class="topic">Industry roles, components and collaboration</p>
+      <p>Write about the different roles in data work and how they work together.</p>
+
+      <h3>4. Lifecycle</h3>
+      <p class="topic">Data acquisition and engineering workflow</p>
+      <p>Write how data moves from collection to cleaning, storage and use.</p>
+
+      <h3>5. Responsibility</h3>
+      <p class="topic">Management, governance and ethics</p>
+      <p>Write about privacy, data quality and ethics.</p>
+
+      <h3>6. Innovation</h3>
+      <p class="topic">Emerging areas and design thinking</p>
+      <p>Write about new areas in data and how design thinking helped you.</p>
+    </section>
+
+    <!-- ===== SELECTED WORK / ARTIFACTS ===== -->
+    <!-- One <article> for each piece of work. Copy and paste an article to add more. -->
     <section id="work">
       <h2>Selected Work</h2>
+
       <article>
         <h3>Design Thinking and Figma</h3>
-        <img src="images/project-screenshot.png"
-             alt="Screenshot of my Figma prototype">
-        <p>Explain the artifact and your contribution.</p>
+        <p class="topic">Linked to: Innovation</p>
+        <img src="images/project-screenshot.png" alt="Screenshot of my Figma prototype">
+        <p><strong>What it is:</strong> Explain what you made.</p>
+        <p><strong>My contribution:</strong> Explain what you did.</p>
+        <p><strong>What I learned:</strong> Explain what you learned.</p>
+        <p><a href="#">Add your Figma link here</a></p>
+      </article>
+
+      <article>
+        <h3>Industry Talk</h3>
+        <p class="topic">Linked to: Ecosystem</p>
+        <p><strong>What it is:</strong> Who gave the talk and what was it about?</p>
+        <p><strong>What I learned:</strong> Write the main things you learned.</p>
+        <!-- Put your PDF in the artifacts folder and name it industry-talk.pdf -->
+        <p><a href="artifacts/industry-talk.pdf">View my industry talk notes (PDF)</a></p>
+      </article>
+
+      <article>
+        <h3>Industry Visit</h3>
+        <p class="topic">Linked to: Ecosystem</p>
+        <p><strong>What it is:</strong> Where did you go and what did you see?</p>
+        <p><strong>What I learned:</strong> Write the main things you learned.</p>
+      </article>
+
+      <article>
+        <h3>Data Engineering Lifecycle Video</h3>
+        <p class="topic">Linked to: Lifecycle</p>
+        <p><strong>What it is:</strong> Describe your video.</p>
+        <p><strong>My contribution:</strong> Explain what you did.</p>
+        <p><a href="#">Add your video link here</a></p>
+      </article>
+
+      <article>
+        <h3>Other Selected Evidence</h3>
+        <p>Add any other work here, such as quizzes, labs or class activities.</p>
       </article>
     </section>
 
-    <section id="journey">
-      <h2>Learning Journey</h2>
-<p>school</p>
+    <!-- ===== COURSE LEARNING SUMMARY ===== -->
+    <section id="summary">
+      <h2>Course Learning Summary</h2>
+      <h3>What I learned</h3>
+      <p>Write about the biggest things you learned in this course.</p>
+      <h3>What I would improve</h3>
+      <p>Write what you would do differently next time.</p>
     </section>
-    <section id="reflection">
-      <h2>Course Reflection</h2>
-      <p>Explain what you learned and what you would improve.</p>
+
+    <!-- ===== SOURCES AND ACKNOWLEDGEMENTS ===== -->
+    <section id="sources">
+      <h2>Sources and Acknowledgements</h2>
+      <ul>
+        <li>Course materials: SCST1133 Data Engineering Ecosystem, UTM</li>
+        <li>Tools used: GitHub Pages, Figma (add any others, including AI tools)</li>
+      </ul>
     </section>
+
   </main>
 
-  <footer><p>© 2026 Nur Salihah</p></footer>
-  </div>
-  
-  <!-- Reveal the GitHub link as it reaches the top of the page. -->
-  <script>
-    function updateScrollEffects() {
-      const intro = document.getElementById('intro');
-      const scrolledPastIntro = intro.getBoundingClientRect().bottom <= 0;
-
-      intro.classList.toggle('fade-out', scrolledPastIntro);
-      document.getElementById('header').classList.toggle('visible', scrolledPastIntro);
-    }
-
-    window.addEventListener('scroll', updateScrollEffects, { passive: true });
-    updateScrollEffects();
-  </script>
-
+  <footer>
+    <p>&copy; 2026 Nur Salihah</p>
+  </footer>
 
 </body>
 </html>
