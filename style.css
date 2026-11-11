@@ -1,163 +1,158 @@
+/* ===== BASIC SETTINGS ===== */
+/* Remove the default spacing so we control it ourselves */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* ===== COLOURS (change them here if you want) =====
+   Dark blue:  #0F172A
+   Teal:       #0D9488
+   Light grey: #F1F5F9
+   Grey text:  #475569
+*/
+
 body {
-  font-family: 'Roboto', sans-serif; 
-  background-color: #5C7E8F;
-  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  background-color: #F1F5F9;
+  color: #0F172A;
   line-height: 1.6;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 }
 
-/* header */
-#header {
-  text-align: center;
-  padding: 20px 0;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
-}
-
-#header.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-#header .logo {
-  display: inline-block;
-  border: 2px solid #A2A2A2;
-  color: #A2A2A2;
-  padding: 8px 24px;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-#header .logo:hover {
-  background-color: #ffffff;
-  color: #1e1e24;
-}
-
-/* intro */
-#intro {
-  min-height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 60px 20px 20px 20px;
-  opacity: 1;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.welcome-card {
-  animation: welcome-fade-in 1s ease-out both;
-}
-
-@keyframes welcome-fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Fade out effect for intro */
-#intro.fade-out {
-  opacity: 0;
-  transform: translateY(-20px);
-  pointer-events: none;
-}
-
-#intro h1 {
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: #ffffff !important;
-  letter-spacing: 3px;
-  line-height: 1.3;
-  text-transform: uppercase;
-}
-
-/* nav */
+/* ===== NAVIGATION BAR ===== */
 nav {
-  display: flex;
-  justify-content: center;
-  gap: 28px;
-  padding: 20px 0;
-  background-color: #D4DDE2;
+  background-color: #0F172A;
+  text-align: center;
+  padding: 14px 10px;
+  position: sticky;   /* keeps the bar at the top when you scroll */
+  top: 0;
 }
 
 nav a {
   color: #FFFFFF;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  margin: 0 12px;
 }
 
-/* Main Sections & Headings */
-main, footer {
+nav a:hover {
+  color: #5EEAD4;
+}
+
+/* ===== HEADER (top of the page) ===== */
+header {
+  background-color: #0F172A;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.subtitle {
+  color: #CBD5E1;
+  margin: 10px 0 24px 0;
+}
+
+/* The GitHub button */
+.button {
+  display: inline-block;
+  background-color: #5EEAD4;
+  color: #0F172A;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #99F6E4;
+}
+
+/* ===== MAIN CONTENT ===== */
+/* Keeps the content in the middle, not too wide */
+main {
   width: min(900px, 92%);
   margin: 40px auto;
 }
 
+/* Each white box */
 section {
   background-color: #FFFFFF;
-  color: #0f172a;
-  padding: 40px 32px;
+  padding: 32px;
   margin-bottom: 30px;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 section h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 18px;
-  color: #1e1e24;
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #0F172A;
 }
 
 section h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 12px;
+  font-size: 1.4rem;
+  margin-top: 24px;
+  margin-bottom: 4px;
 }
 
 section p {
-  font-size: 1.2rem;
-  line-height: 1.7;
+  margin-bottom: 10px;
 }
 
+/* The small teal line under each title, e.g. "Linked to: Innovation" */
+.topic {
+  color: #0D9488;
+  font-weight: 700;
+}
+
+/* Each piece of work gets a line above it to separate it */
+article {
+  border-top: 1px solid #CBD5E1;
+  padding-top: 8px;
+  margin-top: 24px;
+}
+
+section a {
+  color: #0D9488;
+}
+
+ul {
+  padding-left: 24px;
+}
+
+/* ===== IMAGES ===== */
 img {
-  max-width: 100%;
+  max-width: 100%;   /* never wider than the box */
   height: auto;
   border-radius: 8px;
-  margin: 20px 0;
+  margin: 12px 0;
 }
 
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 24px 0;
-  color: #6C8480;
-  font-size: 1.1rem;
+  color: #475569;
+  padding: 20px 0 40px 0;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+/* ===== PHONE SCREENS ===== */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  section {
+    padding: 22px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 4px 8px;
   }
 }
